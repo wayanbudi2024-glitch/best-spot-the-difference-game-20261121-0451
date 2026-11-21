@@ -1,0 +1,39 @@
+/* Lantern Lane — page chrome around the canvas. The game itself is one
+   fixed 1280 x 720 canvas, scaled by CSS to fit the window. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0b1e;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrap {
+  width: min(100vw, calc(100vh * 16 / 9));
+  max-width: 1280px;
+  line-height: 0;
+}
+
+#game {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #171233;
+  cursor: crosshair;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
